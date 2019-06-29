@@ -1767,7 +1767,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9aa875;
+  background: #69ffd9;
 }
 .feed-link,
 .chat {
@@ -2372,7 +2372,7 @@ hr {
   margin-top: 80px;
 }
 .header {
-  background: url("../image/background.jpg");
+  background: url("../images/background.jpg");
 }
 .header-inner {
   padding: 20px 0;
