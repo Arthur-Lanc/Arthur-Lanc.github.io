@@ -33,7 +33,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[nohup 常用命令]]></title>
+    <title><![CDATA[nohup 用法]]></title>
     <url>%2F2019%2F06%2F23%2Fnohup%2F</url>
     <content type="text"><![CDATA[作用linux下用来在后台执行程序 指令nohup CMD &lt; INPUT &gt; STDOUT 2&gt; STDERR 举例nohup ./xixi.sh &gt; /dev/null 2&gt;&amp;1 &amp; # /dev/null表示输出到外太空 查看后台运行的程序ps -aux # a表示all, u表示按照user, x表示不以终端机来区分]]></content>
       <categories>

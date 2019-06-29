@@ -1767,7 +1767,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #69ffd9;
+  background: #751361;
 }
 .feed-link,
 .chat {
@@ -2377,8 +2377,8 @@ hr {
 .header-inner {
   padding: 20px 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .header-inner:before,
 .header-inner:after {
@@ -2726,4 +2726,7 @@ hr {
   transition-property: background;
   box-shadow: 5px 5px 5px #888;
   border-radius: 10px;
+}
+.menu .menu-item {
+  margin-left: 10px;
 }

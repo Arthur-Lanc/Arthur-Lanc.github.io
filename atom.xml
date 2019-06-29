@@ -92,11 +92,11 @@
   </entry>
   
   <entry>
-    <title>nohup 常用命令</title>
+    <title>nohup 用法</title>
     <link href="http://yoursite.com/2019/06/23/nohup/"/>
     <id>http://yoursite.com/2019/06/23/nohup/</id>
     <published>2019-06-23T07:44:53.000Z</published>
-    <updated>2019-06-29T08:50:40.553Z</updated>
+    <updated>2019-06-29T10:08:20.131Z</updated>
     
     <content type="html"><![CDATA[<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>linux下用来在后台执行程序  </p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>nohup CMD &lt; INPUT &gt; STDOUT 2&gt; STDERR</p><h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>nohup ./xixi.sh &gt; /dev/null 2&gt;&amp;1 &amp;   # /dev/null表示输出到外太空</p><a id="more"></a><h2 id="查看后台运行的程序"><a href="#查看后台运行的程序" class="headerlink" title="查看后台运行的程序"></a>查看后台运行的程序</h2><p>ps -aux # a表示all, u表示按照user, x表示不以终端机来区分</p>]]></content>
     
