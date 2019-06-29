@@ -167,9 +167,9 @@
       <category term="Tools" scheme="http://yoursite.com/categories/Tools/"/>
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
-    
       <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   
@@ -232,9 +232,9 @@
       <category term="Tools" scheme="http://yoursite.com/categories/Tools/"/>
     
     
-      <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
-    
       <category term="Crontab" scheme="http://yoursite.com/tags/Crontab/"/>
+    
+      <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
     
   </entry>
   
