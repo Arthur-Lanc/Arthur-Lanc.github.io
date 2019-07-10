@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1. Behave with scientific laws经济学是一门软科学（soft science），它既具有站在社会角度上的一面，又隐藏着自然科学那样的一般规律（scientific laws）。那么，在复杂而多变的经济市场中是否存在着类似的关系呢？">
+<meta name="keywords" content="General equilibrium,Léon Walras">
+<meta property="og:type" content="article">
+<meta property="og:title" content="里昂·瓦尔拉斯数学模型的缺陷">
+<meta property="og:url" content="http://yoursite.com/2019/07/10/eco-walras-equation/index.html">
+<meta property="og:site_name" content="Arlanx&#39;s Blog">
+<meta property="og:description" content="1. Behave with scientific laws经济学是一门软科学（soft science），它既具有站在社会角度上的一面，又隐藏着自然科学那样的一般规律（scientific laws）。那么，在复杂而多变的经济市场中是否存在着类似的关系呢？">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ali.baicizhan.com/readin/images/book_wiki/img_1558162811_396089137">
+<meta property="og:image" content="https://ali.baicizhan.com/readin/images/book_wiki/img_1558162824_987894437">
+<meta property="og:image" content="https://ali.baicizhan.com/readin/images/book_wiki/img_1558339280_715361515">
+<meta property="og:image" content="https://ali.baicizhan.com/readin/images/book_wiki/img_1558162863_640725702">
+<meta property="og:image" content="https://ali.baicizhan.com/readin/images/book_wiki/img_1558162869_681350263">
+<meta property="og:updated_time" content="2019-07-10T15:00:05.743Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="里昂·瓦尔拉斯数学模型的缺陷">
+<meta name="twitter:description" content="1. Behave with scientific laws经济学是一门软科学（soft science），它既具有站在社会角度上的一面，又隐藏着自然科学那样的一般规律（scientific laws）。那么，在复杂而多变的经济市场中是否存在着类似的关系呢？">
+<meta name="twitter:image" content="https://ali.baicizhan.com/readin/images/book_wiki/img_1558162811_396089137">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Arlanx's Blog" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/07/10/eco-walras-equation/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>里昂·瓦尔拉斯数学模型的缺陷 | Arlanx's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Arlanx's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">O ever youthful, O ever powerful.</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/10/eco-walras-equation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Arlanx">
+      <meta itemprop="description" content="The past is a foreign country, they do things differently there.">
+      <meta itemprop="image" content="/uploads/deku-head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Arlanx's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">里昂·瓦尔拉斯数学模型的缺陷
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-10 22:48:19 / 修改时间：23:00:05" itemprop="dateCreated datePublished" datetime="2019-07-10T22:48:19+08:00">2019-07-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Economic/" itemprop="url" rel="index"><span itemprop="name">Economic</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Economic/Behave-with-scientific-laws/" itemprop="url" rel="index"><span itemprop="name">Behave with scientific laws</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/07/10/eco-walras-equation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/10/eco-walras-equation/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-Behave-with-scientific-laws"><a href="#1-Behave-with-scientific-laws" class="headerlink" title="1. Behave with scientific laws"></a><em><strong>1. Behave with scientific laws</strong></em></h2><p>经济学是一门软科学（soft science），它既具有站在社会角度上的一面，又隐藏着自然科学那样的一般规律（scientific laws）。那么，在复杂而多变的经济市场中是否存在着类似的关系呢？</p>
+<a id="more"></a>
+
+<p>1881年，英国教授 <em><strong>埃奇沃思</strong></em> 在他早期作品《数学心理学》（Mathematical Psychics, 1881）中产生了用数学模型来归纳经济学问题的想法，指出 <em><strong>经济学问题就是处理变量之间的关系</strong>_。这在它的快乐测量仪中有所体现，认为经济成果可以用幸福感来衡量。德国经济学家 _<strong>杜能（Johann von Thunen）</strong></em> 提出了公平薪资和土地利用最大化公式。而今天的主角里昂·瓦尔拉斯（Léon Walras）却放眼整个经济学，试图为它 _<strong>搭建完整的数学和社会学框架</strong>_。<br>瓦尔拉斯坚信世界上存在着将经济学发展成为像自然科学一样，能够描述人的行为的法则。一般均衡理论就是可以讨论整个经济学生产、消费和价格的重要成果。<br><img src="https://ali.baicizhan.com/readin/images/book_wiki/img_1558162811_396089137" alt="图片1.pnghttps://ali.baicizhan.com/readin/images/book_wiki/img_1558162811_396089137"><br>==Mathematics，图片来自谷歌==</p>
+<hr>
+<h2 id="2-Supply-and-demand"><a href="#2-Supply-and-demand" class="headerlink" title="2. Supply and demand"></a><em><strong>2. Supply and demand</strong></em></h2><p>在寻找法则，搭建框架的开始，瓦尔拉斯试图找出供给和需求（supply and demand）是如何相互作用达成一致的。与埃奇沃思和杰文斯这些将效用作为决定商品价值关键因素的经济学家不同，<em><strong>瓦尔拉斯认为商品价值取决于该商品的稀有性（rarity）</strong>_。<br>根据这一指导思想，瓦尔拉斯就开始构建供求关系的数学模型了。由于模型公式表达复杂繁多，所以在这里不展开论述。通过这些方程，我们可以知道的规律是：</em><strong>当商品价格上涨时，商品的供给量增加，需求反而减少。当需求和供给相等时，市场处于均衡</strong>_。</p>
+<hr>
+<h2 id="3-General-equilibrium"><a href="#3-General-equilibrium" class="headerlink" title="3. General equilibrium"></a><em><strong>3. General equilibrium</strong></em></h2><p>这一规律的描述似乎与之前经济学家们描述的法则一般无二，表示某一产品，生产商生产的数量和价格恰好被消费者接受，消费者将提供的商品购完，供给和需求达成平衡，不多也不少。<br>但是瓦尔拉斯将这一想法继续深入，归纳出了整个经济中的规律：<em><strong>设某一地区市场中的产品处于过剩状态</strong>_，那么它的价格一定过高。如果它过高，那么相对来说，</em><strong>一定有另外一个市场中该商品价格较低，商品短缺</strong><em>。
+这样一来，商品短缺后，商品价格上涨，而过剩的地区，商品价格下降。最终的结果是，在短缺地区，随着商品价格的上涨，需求量减少，供给量增加，商品不再短缺。原本过剩地区的商品价格下降，对该商品的需求量增加，供给减少，商品不再过剩。<br><img src="https://ali.baicizhan.com/readin/images/book_wiki/img_1558162824_987894437" alt="图片2.pnghttps://ali.baicizhan.com/readin/images/book_wiki/img_1558162824_987894437"><br>==示意图，图片自制==<br>按照瓦尔拉斯从商品稀缺度对商品价值角度的定义来看，作为一个整体，经济会趋于平衡。<br>此外，瓦尔拉斯还在模型中 _<strong>添加了生产要素的分析</strong>_，认为要素相互依存的关系非常关键：</em><strong>价格不会无缘无故变化，只有供求关系变化时才会变化</strong>_。在复杂的经济活动中，任何小的变化都会在其他经济市场中产生连锁反应。</p>
+<hr>
+<h2 id="4-Towards-equilibrium"><a href="#4-Towards-equilibrium" class="headerlink" title="4. Towards equilibrium"></a><em><strong>4. Towards equilibrium</strong></em></h2><p>瓦尔拉斯通过将数学经济模型简化成几个由价格和数量组成的公式，得出了两条结论，证明自由市场本身的稳定性（_<strong>system of free market is stable</strong>_）：</p>
+<ol>
+<li>一般均衡状态从理论上来说是存在的；</li>
+<li>无论经济活动从什么地方开始，自由市场都会让它慢慢趋于平衡。<br>为了解释市场调节的均衡作用，瓦尔拉斯虚构了一个“拍卖商”（auctioneer）,它收集消费者和生产商提出的对某一商品的出价或者要价，并宣布在每个市场中供给和需求达到一致的那个价格，这时，拍卖才开始，市场达到平衡的运作状态。“拍卖商”的工作是对双方的价格进行调整，_<strong>消除经济中商品或者需求的过剩</strong>_。</li>
+</ol>
+<p><img src="https://ali.baicizhan.com/readin/images/book_wiki/img_1558339280_715361515" alt="image.pnghttps://ali.baicizhan.com/readin/images/book_wiki/img_1558339280_715361515"><br>==Auctioneer，图片来自谷歌==</p>
+<hr>
+<h2 id="5-Flaws-of-the-model"><a href="#5-Flaws-of-the-model" class="headerlink" title="5. Flaws of the model"></a><em><strong>5. Flaws of the model</strong></em></h2><p>瓦尔拉斯的数学模型从提出到被学术界研究清楚的过程是曲折的。与他同时代的经济学家不看中他的研究，都认为不可能达到他所描述的均衡状态。连他自己都说，这个模型是用来协助经济学家们进行研究的，而 <em><strong>不适用于现实中的经济</strong>_。<br>后来，在瓦尔拉斯去世20年后，美国数学家 _<strong>冯·诺依曼</strong></em> 指出了瓦尔拉斯复杂方程式中的缺陷（flaw of the model），即根据这些方程式 <em><strong>计算出的结果可能是负数（negative price）</strong>_。这意味着，在瓦尔拉斯模型中，销售者有时候还得向消费者支付费用。凯恩斯也抨击瓦尔拉斯的数学模型，</em><strong>认为经济不可能均衡</strong><em>，而且也没必要考虑长期流通。<br>然而，瓦尔拉斯的数学模型在美国经济学家肯尼斯·阿罗（Kenneth Arrow）和马肯齐（Lionel W McKenzie）的研究中的重获新生，法国经济学家德布鲁（Gérard Debreu）也再次谈论了瓦尔拉斯的研究成果。他们发现，</em><strong>当人的购买决策具有一致性时，市场才有可能处于均衡状态</strong>_。这里的一致性指的是个人喜好的“可传递性”，比如相对于橘子你更喜欢苹果，相对于葡萄，你更喜欢橘子。那么，相对于葡萄，你就必须更喜欢苹果。<br><img src="https://ali.baicizhan.com/readin/images/book_wiki/img_1558162863_640725702" alt="图片4.pnghttps://ali.baicizhan.com/readin/images/book_wiki/img_1558162863_640725702"><br>==水果，图片来自Pinterest==<br>从数学上来看似乎很对的样子！但现实生活中，购买喜好并不能用这样的数学方法来推导，毕竟我们是爱吃什么就买什么的human being~</p>
+<hr>
+<h2 id="6-Leon-Walras"><a href="#6-Leon-Walras" class="headerlink" title="6. Léon Walras"></a><em><strong>6. Léon Walras</strong></em></h2><p><em><strong>里昂·瓦尔拉斯（Léon Walras）</strong></em> 1834年出生于法国巴黎，长大后在巴黎国立高等院校中学习工程学。然而他觉得工程学索然无味，就做起了记者、浪漫小说家和铁道工人等职业，在浪漫巴黎过着放荡不羁的生活（bohemian life）。<br><img src="https://ali.baicizhan.com/readin/images/book_wiki/img_1558162869_681350263" alt="图片5.pnghttps://ali.baicizhan.com/readin/images/book_wiki/img_1558162869_681350263"><br>==Léon Walras, 图片来自维基百科==<br>但是父亲对他的经济学道路影响深远，告诉他这一生最重要最浪漫的事情是要将经济学变为一种科学。随后，他就继承了父亲对社会改革的兴趣，开始了经济学道路。虽然他依然过着粗犷豪放的生活，但因贫穷搬到瑞士的洛桑后，被指派成为了一名经济学教授，研究并提出了一般均衡理论。<br>由于瓦尔拉斯的大部分出版物以法文出版，许多经济学家对他的作品并不熟悉。即使被翻译为了纯英文，面对书中复杂的公式，学者们还是望而却步，况且当时已经有很多关于理想条件下对市场过程的解读。这样就能够理解瓦尔拉斯模型研究的如此艰难的原因了……</p>
+<hr>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><blockquote>
+<p>消费者偏好：<br><a href="https://finance.qq.com/a/20170222/033131.htm" target="_blank" rel="noopener">https://finance.qq.com/a/20170222/033131.htm</a><br>Léon Walras：<br><a href="https://en.wikipedia.org/wiki/L%C3%A9on_Walras#Biography" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/L%C3%A9on_Walras#Biography</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/General-equilibrium/" rel="tag"> <i class="fa fa-tag"></i> General equilibrium</a>
+          
+            <a href="/tags/Leon-Walras/" rel="tag"> <i class="fa fa-tag"></i> Léon Walras</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/10/eco-giffen-goods/" rel="next" title="别具一格的吉芬商品">
+                <i class="fa fa-chevron-left"></i> 别具一格的吉芬商品
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/deku-head.jpg" alt="Arlanx">
+            
+              <p class="site-author-name" itemprop="name">Arlanx</p>
+              <div class="site-description motion-element" itemprop="description">The past is a foreign country, they do things differently there.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Arthur-Lanc" title="GitHub &rarr; https://github.com/Arthur-Lanc" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/u/6237809413" title="Weibo &rarr; https://weibo.com/u/6237809413" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/jiawei2233" title="Twitter &rarr; https://twitter.com/jiawei2233" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://diygod.me/" title="https://diygod.me/" rel="noopener" target="_blank">diygod</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.aofall.com/" title="https://blog.aofall.com/" rel="noopener" target="_blank">aofall</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://aoaoao.me/" title="https://aoaoao.me/" rel="noopener" target="_blank">aoaoao</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://qaq.cat/" title="https://qaq.cat/" rel="noopener" target="_blank">qaq</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.cee.moe/" title="http://blog.cee.moe/" rel="noopener" target="_blank">cee</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.fghrsh.net/" title="https://www.fghrsh.net/" rel="noopener" target="_blank">fghrsh</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.fly3949.com/" title="https://www.fly3949.com/" rel="noopener" target="_blank">fly3949</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.freejishu.com/" title="https://www.freejishu.com/" rel="noopener" target="_blank">freejishu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://jimmy66.com/" title="http://jimmy66.com/" rel="noopener" target="_blank">jimmy66</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://imjad.cn/" title="https://imjad.cn/" rel="noopener" target="_blank">imjad</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://kn007.net/" title="https://kn007.net/" rel="noopener" target="_blank">kn007</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zankyo.cc/" title="https://zankyo.cc/" rel="noopener" target="_blank">zankyo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.lwl12.com/" title="https://blog.lwl12.com/" rel="noopener" target="_blank">lwl12</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Behave-with-scientific-laws"><span class="nav-number">1.</span> <span class="nav-text">1. Behave with scientific laws</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Supply-and-demand"><span class="nav-number">2.</span> <span class="nav-text">2. Supply and demand</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-General-equilibrium"><span class="nav-number">3.</span> <span class="nav-text">3. General equilibrium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Towards-equilibrium"><span class="nav-number">4.</span> <span class="nav-text">4. Towards equilibrium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Flaws-of-the-model"><span class="nav-number">5.</span> <span class="nav-text">5. Flaws of the model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Leon-Walras"><span class="nav-number">6.</span> <span class="nav-text">6. Léon Walras</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文献"><span class="nav-number">6.1.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Arlanx</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">55k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">50 分钟</span>
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="footer-custom">Hosted by 电话微波炉【暂定】</div>
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://arlanx.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://yoursite.com/2019/07/10/eco-walras-equation/";
+    this.page.identifier = "2019/07/10/eco-walras-equation/";
+    this.page.title = '里昂·瓦尔拉斯数学模型的缺陷';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://arlanx.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+</body>
+</html>
